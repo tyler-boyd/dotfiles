@@ -1,0 +1,5 @@
+alias be="bundle exec"
+alias bes="bundle exec spring"
+alias bi="bundle install"
+alias bu="bundle update"
+alias gs="git status"
