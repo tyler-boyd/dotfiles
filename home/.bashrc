@@ -3,30 +3,35 @@ alias bes="bundle exec spring"
 alias bi="bundle install"
 alias bu="bundle update"
 alias gs="git status"
+alias gps="git push"
+alias gc="git checkout"
+alias gcb="git rev-parse --abbrev-ref HEAD $argv"
+alias gpsf="git push --force"
+alias gp="git pull"
+alias gpsh="git push heroku"
+alias cleardns="sudo killall -HUP mDNSResponder"
+alias cd..="cd .."
 export PRY=1
-
-function fucksecrets(){ 
-	$(git update-index --no-assume-unchanged config/secrets.yml && git checkout config/secrets.yml)
-}
-function fixsecrets() {
-	$(git update-index --assume-unchanged config/secrets.yml && cp config/secrets.yml.bak config/secrets.yml)
-}
+export EDITOR=vim
 
 source ~/git-completion.bash
 
-if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
+if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   GIT_PROMPT_THEME=Default
-  source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
+  source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
 fi
 
 alias sshcs="ssh tboyd@linux.student.cs.uwaterloo.ca"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# Add ~/bin to start of path, eg. for python->python3 override
+export PATH="$HOME/bin:$PATH"
+# Add python3.7/bin to path
+export PATH="$PATH:/Users/tyler/Library/Python/3.7/bin/"
 
-# The following three lines have been added by UDB DB2.
-if [ -f /Users/tyler/sqllib/db2profile ]; then
-    . /Users/tyler/sqllib/db2profile
-fi
+# sad ree about rvm/openssl/homebrew
+export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig:/usr/local/lib/pkgconfig
 
-
+# chruby
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+chruby 2.4 # don't default to system ruby
