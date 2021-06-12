@@ -5,21 +5,21 @@
 - clean: ['~']
 
 - link:
-  '~/.tmux.conf': tmux/tmux.conf
-  '~/.gitconfig': git/.gitconfig
-  '~/.zshrc': zsh/.zshrc
-  '~/.zprofile': zsh/.zprofile
-  '~/.zshenv': zsh/.zshenv
+    '~/.tmux.conf': tmux/tmux.conf
+    '~/.gitconfig': git/.gitconfig
+    '~/.zshrc': zsh/.zshrc
+    '~/.zprofile': zsh/.zprofile
+    '~/.zshenv': zsh/.zshenv
 
 - shell:
    -
-     command: "cd bin/macos && ./setup.sh"
+     command: "cd bin && ./setup.sh"
      stdout: true
    -
-     command: bin/macos/sane-defaults.sh
+     command: bin/sane-defaults.sh
      stdout: true
    -
-     command: bin/macos/default-to-zsh.sh
+     command: bin/default-to-zsh.sh
      stdout: true
    -
      command: "cat vscode/extensions.list | xargs -I % code --install-extension %"
@@ -28,5 +28,3 @@
     command: "cp vscode/keybindings.json ~/Library/Application\\ Support/Code/User/keybindings.json"
    -
     command: "cp vscode/settings.json  ~/Library/Application\\ Support/Code/User/settings.json"
-   -
-    command: "vim  +PlugInstall +qall"

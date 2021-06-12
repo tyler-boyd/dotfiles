@@ -13,8 +13,6 @@ brew bundle install
 
 echo "Installing additional tooling..."
 set -e
-volta install node
-volta install yarn
 pyenv install 3.8.1 -s
 pyenv global 3.8.1
 pip install --upgrade pip
