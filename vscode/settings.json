@@ -1,0 +1,94 @@
+{
+    "editor.fontSize": 16,
+    "editor.renderWhitespace": "boundary",
+    "editor.trimAutoWhitespace": true,
+    "workbench.colorTheme": "Monokai",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+    "emmet.excludeLanguages": [
+        "markdown",
+        "javascript"
+    ],
+    "emmet.includeLanguages": {
+        "erb": "html",
+        "svelte": "html"
+    },
+    "workbench.editor.tabSizing": "shrink",
+    "explorer.autoReveal": false,
+    "explorer.confirmDragAndDrop": false,
+    "editor.tabSize": 2,
+    "files.associations": {
+        "*.js": "javascript",
+        "*.axlsx": "ruby"
+    },
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "search.exclude": {
+        "**/build": true
+    },
+    "breadcrumbs.enabled": true,
+    "extensions.ignoreRecommendations": false,
+    "go.gopath": "/Users/tylerboyd/golang",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "javascript.validate.enable": false,
+    "terraform.indexing": {
+        "enabled": false,
+        "liveIndexing": false,
+        "delay": 500,
+        "exclude": [
+            ".terraform/**/*",
+            "**/.terraform/**/*"
+        ]
+    },
+    "terraform.languageServer": {
+        "external": true,
+        "args": [
+            "serve"
+        ]
+    },
+    "terraform.codelens.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.blame.avatars": false,
+    "gitlens.blame.highlight.enabled": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "html.mirrorCursorOnMatchingTag": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "rust-client.rustupPath": "/Users/tylerboyd/.cargo/bin/rustup",
+    "rust-client.trace.server": "verbose",
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust"
+    },
+    "explorer.openEditors.visible": 0,
+    "go.toolsManagement.autoUpdate": true,
+    "window.zoomLevel": 1,
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "terminal.integrated.profiles.osx": {
+        "zsh": {
+            "path": "zsh",
+            "args": ["-l"]
+        },
+    },
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "debug.internalConsoleOptions": "openOnSessionStart",
+    "debug.showInStatusBar": "always",
+    "debug.terminal.clearBeforeReusing": true,
+    "debug.javascript.terminalOptions": {
+        "command": "printenv"
+    },
+    "svelte.enable-ts-plugin": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "redhat.telemetry.enabled": true,
+    "[terraform]": {
+        "editor.defaultFormatter": "hashicorp.terraform"
+    },
+    "svelte.language-server.runtime": "/Users/tylerboyd/.nvm/versions/node/v14.17.0/bin/node",
+    "svelte.plugin.css.globals": "public/global.css",
+}

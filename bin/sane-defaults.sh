@@ -94,7 +94,7 @@ defaults write com.apple.helpviewer DevMode -bool true
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
 # Disable automatic capitalization as it’s annoying when typing code
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
@@ -152,8 +152,8 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain KeyRepeat -int 12
+defaults write NSGlobalDomain InitialKeyRepeat -int 1
 
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
@@ -170,10 +170,10 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bo
 sudo systemsetup -settimezone "America/Toronto" > /dev/null
 
 # Set the clock format on the menu bar
-defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm:ss"
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM hh:mm:ss"
 
 # Stop iTunes from responding to the keyboard media keys
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
 ###############################################################################
 # Energy saving                                                               #
@@ -794,7 +794,7 @@ defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
 ###############################################################################
 
 # Install Sublime Text settings
-cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
+# cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
 
 
 ###############################################################################

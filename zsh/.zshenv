@@ -18,6 +18,4 @@ export EDITOR="code --wait"
 
 export NVM_DIR="$HOME/.nvm"
 export NVMDIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm use default #>/dev/null # This loads nvm
-echo PATH=$PATH
-nvm ls
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm use default >/dev/null # This loads nvm
