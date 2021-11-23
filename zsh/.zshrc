@@ -62,7 +62,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git asdf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,3 +105,5 @@ alias cleardns="sudo killall -HUP mDNSResponder"
 alias cd..="cd .."
 alias clip="tr -d '\n' | pbcopy"
 alias kc="kubectl"
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+unsetopt share_history
