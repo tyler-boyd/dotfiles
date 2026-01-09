@@ -11,3 +11,5 @@ alias kc="kubectl"
 unsetopt share_history
 
 export PATH="$HOME/.local/bin:$PATH"
+
+eval "$(starship init zsh)"
