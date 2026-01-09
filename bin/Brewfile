@@ -61,6 +61,7 @@ brew "etopeter/tap/kubectl-view-utilization"
 brew "elasticsearch"
 brew "ffmpeg"
 brew "asdf"
+brew "fzf"
 
 cask "docker"
 cask "dotnet-sdk"
