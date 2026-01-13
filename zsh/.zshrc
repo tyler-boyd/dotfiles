@@ -15,5 +15,6 @@ bindkey "^[[B" history-beginning-search-forward
 
 
 export PATH="$HOME/.local/bin:$PATH"
+export WORDCHARS="-_"
 
 eval "$(starship init zsh)"
