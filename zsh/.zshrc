@@ -10,8 +10,8 @@ alias clip="tr -d '\n' | pbcopy"
 alias kc="kubectl"
 unsetopt share_history
 
-bindkey "^[[A" history-search-backward
-bindkey "^[[B" history-search-forward
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 
 export PATH="$HOME/.local/bin:$PATH"
