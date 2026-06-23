@@ -18,7 +18,12 @@ bindkey "^[[B" history-beginning-search-forward
 export PATH="$HOME/.local/bin:$PATH"
 export WORDCHARS="-_"
 
-eval "$(starship init zsh)"
+starshipcache="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/starship-init.zsh"
+if [[ ! -s $starshipcache ]]; then
+  mkdir -p ${starshipcache:h}
+  starship init zsh >| $starshipcache
+fi
+source $starshipcache
 
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search

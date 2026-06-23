@@ -9,6 +9,12 @@ export EDITOR="code --wait"
 export LD_LIBRARY="$LD_LIBRARY:/opt/homebrew/opt/mono-libgdiplus/lib/"
 
 # Set PATH, MANPATH, etc., for Homebrew.
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+brewcache="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/brew-shellenv.zsh"
+if [[ ! -s $brewcache ]]; then
+  mkdir -p ${brewcache:h}
+  brew shellenv >| $brewcache
+fi
+source $brewcache
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh

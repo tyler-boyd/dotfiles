@@ -10,6 +10,8 @@
     "~/.zshrc": zsh/.zshrc
     "~/.zprofile": zsh/.zprofile
     "~/.zshenv": zsh/.zshenv
+    "~/.config/zed/keymap.json": zed/keymap.json
+    "~/.config/zed/settings.json": zed/settings.json
 
 - shell:
     - command: "cd bin && ./setup.sh"

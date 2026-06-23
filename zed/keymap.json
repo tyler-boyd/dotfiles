@@ -1,0 +1,13 @@
+[
+  {
+    "context": "Terminal",
+    "bindings": {
+      "shift-enter": ["terminal::SendText", "\u001b\r"],
+    },
+  },
+  {
+    "bindings": {
+      "alt-shift-i": "editor::SplitSelectionIntoLines",
+    },
+  },
+]
