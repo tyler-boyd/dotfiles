@@ -5,7 +5,7 @@ export PATH="$PATH:/Users/tylerboyd/bin/openapitools/"
 
 export ANDROID_HOME=/Users/$USER/Library/Android/sdk
 export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
-export EDITOR="code --wait"
+export EDITOR="zed"
 export LD_LIBRARY="$LD_LIBRARY:/opt/homebrew/opt/mono-libgdiplus/lib/"
 
 # Set PATH, MANPATH, etc., for Homebrew.
