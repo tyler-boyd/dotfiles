@@ -12,6 +12,7 @@
     "~/.zshenv": zsh/.zshenv
     "~/.config/zed/keymap.json": zed/keymap.json
     "~/.config/zed/settings.json": zed/settings.json
+    "~/.aerospace.toml": ./aerospace.toml
 
 - shell:
     - command: "cd bin && ./setup.sh"
