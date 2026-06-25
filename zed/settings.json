@@ -7,7 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "show_edit_predictions": false,
   "cli_default_open_behavior": "existing_window",
+  "languages": {
+    "CSharp": {
+      "formatter": {
+        "external": {
+          "command": "dotnet",
+          "arguments": ["csharpier", "format"],
+        },
+      },
+    },
+  },
   "preview_tabs": {
     "enabled": false,
   },
@@ -18,9 +29,6 @@
     "inline_blame": {
       "enabled": false,
     },
-  },
-  "auto_update_extensions": {
-    "csharp": false,
   },
   "agent_servers": {
     "claude-acp": {
@@ -46,12 +54,12 @@
     "light": "Ayu Light",
     "dark": "Ayu Mirage",
   },
-  "lsp": {
-    "roslyn": {
-      "binary": {
-        "path": "/Users/Tyler.Boyd/.dotnet/tools/roslyn-language-server",
-        "arguments": ["--stdio"],
-      },
-    },
-  },
+  // "lsp": {
+  //   "roslyn": {
+  //     "binary": {
+  //       "path": "/Users/Tyler.Boyd/.dotnet/tools/roslyn-language-server",
+  //       "arguments": ["--stdio"],
+  //     },
+  //   },
+  // },
 }
