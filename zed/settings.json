@@ -43,8 +43,8 @@
   "buffer_font_size": 15,
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "Ayu Dark",
+    "light": "Ayu Light",
+    "dark": "Ayu Mirage",
   },
   "lsp": {
     "roslyn": {
