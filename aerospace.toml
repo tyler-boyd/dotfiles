@@ -190,7 +190,7 @@ run = 'move-node-to-workspace 2'
 if.app-id = 'com.tinyspeck.slackmacgap'
 run = ['layout floating', 'move-node-to-workspace 3']
 [[on-window-detected]]
-if.app-name-regex-substring = 'com.valvesoftware.steam'
+if.app-id = 'com.valvesoftware.steam'
 run = ['layout floating', 'move-node-to-workspace 3']
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
