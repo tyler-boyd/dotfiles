@@ -221,3 +221,6 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-id = 'com.apple.Notes'
 run = 'layout floating'
+[[on-window-detected]]
+if.app-id = 'com.apple.iWork.Numbers'
+run = 'layout floating'
