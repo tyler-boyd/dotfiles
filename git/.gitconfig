@@ -7,7 +7,7 @@
 	autoSetupRemote = true
 
 [core]
-        editor = zed
+        editor = code --wait
 [diff]
     tool = default-difftool
 [difftool "default-difftool"]
