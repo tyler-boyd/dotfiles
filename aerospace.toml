@@ -48,39 +48,7 @@ automatically-unhide-macos-hidden-apps = false
 # even when they are invisible.
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-persistent-workspaces = [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "I",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
-]
+persistent-workspaces = ["1", "2", "3", "4", "Q", "W"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -163,15 +131,19 @@ alt-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
+alt-2 = ['workspace 2', 'layout v_accordion']
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
+alt-q = 'workspace Q'
+alt-w = 'workspace W'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
 alt-shift-2 = 'move-node-to-workspace 2'
 alt-shift-3 = 'move-node-to-workspace 3'
 alt-shift-4 = 'move-node-to-workspace 4'
+alt-shift-q = 'move-node-to-workspace Q'
+alt-shift-w = 'move-node-to-workspace W'
 alt-shift-f = 'fullscreen'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
@@ -213,17 +185,11 @@ run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
 if.app-id = 'dev.zed.Zed'
-run = 'move-node-to-workspace 2'
-[[on-window-detected]]
-if.app-id = 'com.openai.codex'
-run = 'move-node-to-workspace 2'
+run = ['move-node-to-workspace 2', 'layout v_accordion']
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
-run = 'move-node-to-workspace 2'
+run = ['move-node-to-workspace 2', 'layout v_accordion']
 
-[[on-window-detected]]
-if.app-id = 'com.tinyspeck.slackmacgap'
-run = ['layout floating', 'move-node-to-workspace 3']
 [[on-window-detected]]
 if.app-id = 'com.valvesoftware.steam'
 run = ['layout floating', 'move-node-to-workspace 3']
@@ -231,14 +197,22 @@ run = ['layout floating', 'move-node-to-workspace 3']
 if.app-id = 'com.spotify.client'
 run = ['layout floating', 'move-node-to-workspace 3']
 [[on-window-detected]]
-if.app-id = 'net.whatsapp.WhatsApp'
-run = ['layout floating', 'move-node-to-workspace 3']
-[[on-window-detected]]
 if.app-id = 'com.jetbrains.datagrip'
 run = ['move-node-to-workspace 3']
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
 run = ['layout floating', 'move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-id = 'com.openai.codex'
+run = 'move-node-to-workspace Q'
+
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = ['layout floating', 'move-node-to-workspace W']
+[[on-window-detected]]
+if.app-id = 'net.whatsapp.WhatsApp'
+run = ['layout floating', 'move-node-to-workspace W']
 
 # Floating in any workspace
 [[on-window-detected]]
